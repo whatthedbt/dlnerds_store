@@ -1,0 +1,9 @@
+sources:
+  - name: file_system
+    database: DLNERDS_DB
+    schema: bronze
+    tables:
+      - name: country_raw
+      - name: customer_raw
+      - name: product_raw
+      - name: sales_raw
