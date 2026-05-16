@@ -25,6 +25,12 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 
+# Add this setting to your dbt_project.yml file
+vars:
+  # Forces dbt freshness checks to interpret timezone-less timestamps as UTC
+  # without generating a warning log
+  dbt_date:time_zone: "UTC"
+
 
 seeds:
   dlnerds_store:
@@ -50,3 +56,11 @@ models:
       +tags: ['bronze']
       +docs:
         node_color: 'orange'
+
+    silver:
+      +enabled: true
+      +materialized: table
+      +schema: silver
+      +tags: ['silver']
+      +docs:
+        node_color: 'silver'
