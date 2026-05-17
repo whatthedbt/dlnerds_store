@@ -15,7 +15,8 @@ cte_clean_customer as(
     when city = 'New York' then'US'
     when city = 'Stuttgart' then 'DE'
     else null
-    end as country_code, city, created_at, updated_at from cte_cast_customer
+    end as country_code, 
+    city, created_at, updated_at from cte_cast_customer
 
 )
 

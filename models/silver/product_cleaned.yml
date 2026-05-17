@@ -19,7 +19,13 @@ models:
       - name: category
         data_type: varchar
         description: ""
-
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Tshirt", "Hoodie", "Short", "Socks", "Jacket", "Accessories"]
+              config: # This changes it from a Failure to a Warning
+                severity: warn
+    
       - name: price
         data_type: float
         description: ""

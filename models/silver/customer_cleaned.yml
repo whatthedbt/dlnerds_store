@@ -8,6 +8,7 @@ models:
       data_type: varchar
       tests:
         - unique
+        
       description: ""
 
     - name: name
@@ -28,6 +29,8 @@ models:
 
     - name: country_code
       data_type: varchar
+      tests:
+        - not_null
       description: ""
 
     - name: city
