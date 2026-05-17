@@ -64,3 +64,11 @@ models:
       +tags: ['silver']
       +docs:
         node_color: 'silver'
+
+    gold:
+      +enabled: true
+      +materialized: view
+      +schema: gold
+      +tags: ['gold']
+      +docs:
+        node_color: 'gold'
