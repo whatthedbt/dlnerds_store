@@ -2,10 +2,12 @@ version: 2
 
 models:
 - name: customer_cleaned
-  description: ""
+  description: "Cleaned customer data"
   columns:
     - name: id
       data_type: varchar
+      tests:
+        - unique
       description: ""
 
     - name: name
