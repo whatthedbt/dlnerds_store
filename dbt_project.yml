@@ -58,8 +58,11 @@ models:
       +tags: ['bronze']
       +docs:
         node_color: 'orange'
-      +grants:
-        select: ['reporter_role', 'bi_tool_user']
+      # +grants:
+      #   select: ['reporter_role', 'bi_tool_user']
+
+# Grants define who can access which models in your warehouse. 
+# They help enforce data security, role-based access, and best practices in analytics engineering.
 
     silver:
       +enabled: true
@@ -68,8 +71,8 @@ models:
       +tags: ['silver']
       +docs:
         node_color: 'silver'
-      +grants:
-        select: ['data_engineer_role']
+      # +grants:
+      #   select: ['data_engineer_role']
 
     gold:
       +enabled: true
@@ -78,5 +81,5 @@ models:
       +tags: ['gold']
       +docs:
         node_color: 'gold'
-      +grants:
-        select: ['executive_role', 'reporter_role']
+      # +grants:
+      #   select: ['executive_role', 'reporter_role']
