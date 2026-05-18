@@ -10,4 +10,5 @@ cte_cast_country as (
     from cte_read_country
 )
 
-select * from cte_cast_country
+{# This is a Jinja comment block and below we are using global variable called country declared in dbt_project.yml file #}
+select * from cte_cast_country where country_code = '{{ var('country')}}'
