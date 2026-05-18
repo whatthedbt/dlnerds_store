@@ -9,8 +9,9 @@ cte_read_country as (
 ),
 
 cte_transform_customer as(
-    select id, split_part(name, ' ', 1) as first_name,
-    split_part(name, ' ', 2) as last_name,
+    -- Applying macro called split_name
+    select id, {{ split_name('name', 1)}} as first_name,
+   {{ split_name('name', 2 )}} as last_name,
     gender, 
     date_of_birth, email, country_code, city, created_at, updated_at
     from cte_read_customer
