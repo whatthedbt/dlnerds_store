@@ -1,0 +1,19 @@
+version: 2
+
+exposures:
+  - name: sales_dashboard
+    label: Sales Dashboard
+    type: dashboard
+    maturity: high
+    description: Dashboard for sales performance
+
+    url: https://bi.company.com/dashboards/sales
+
+    depends_on:
+      - ref('dim_customers')
+      - ref('dim_product')
+      - ref('fact_sales')
+
+    owner:
+      name: Analytic Team
+      email: test@gmail.com
