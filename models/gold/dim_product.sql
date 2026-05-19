@@ -15,6 +15,7 @@
     ",
 
     post_hook = "
+    -- {{ this }} outputs the fully qualified identifier (e.g., database.schema.my_model). so we use 
     insert into audit_log(model_name, run_time, status) values('" ~ model.name ~ "', current_timestamp, 'completed');"
     )
     }}
